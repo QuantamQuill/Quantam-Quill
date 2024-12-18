@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Homepage</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #ff7e5f;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Parallax Background */
+    .parallax {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+      background-size: cover;
+      background-attachment: fixed;
+      z-index: -1;
+    }
+
+    /* Gradient Animation */
+    @keyframes gradientAnimation {
+      0% {
+        background: #ff7e5f;
+      }
+
+      25% {
+        background: #feb47b;
+      }
+
+      50% {
+        background: #86a8e7;
+      }
+
+      75% {
+        background: #ff6a00;
+      }
+
+      100% {
+        background: #ff7e5f;
+      }
+    }
+
+    /* Container Styles */
+    .container {
+      text-align: center;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      animation: gradientAnimation 10s ease infinite;
+      z-index: 1;
+    }
+
+    .container h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .container p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    /* Button Styles */
+    .button {
+      padding: 15px 30px;
+      margin: 15px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: white;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff7e5f;
+      transform: scale(1.1);
+    }
+
+    /* Button Animations */
+    .explore-btn {
+      background-color: #ff7e5f;
+    }
+
+    .edit-btn {
+      background-color: #86a8e7;
+    }
+
+    /* Hover Effects for Cards */
+    .card {
+      padding: 20px;
+      margin: 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    /* FadeIn Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 8px 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #ff7e5f;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      background-color: white;
+      height: 4px;
+      width: 30px;
+      margin: 5px;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .navbar-links {
+        display: none;
+      }
+
+      .navbar.open .navbar-links {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="parallax"></div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="navbar-links">
+      <a href="#explore">Explore</a>
+      <a href="#edit">Edit</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Quantam Quill</h1>
+    <p>Explore Quantam Quill and grab a Opportunity to join on our never ending ultimate journey</p>
+
+    <div class="card">
+      <a href="https://quantamquill.github.io/Quantam/" class="button explore-btn" target="_blank">Explore</a>
+    </div>
+    <div class="card">
+      <a href="https://quantamquill.github.io/BasicEdit/" class="button edit-btn" target="_blank">Edit</a>
+    </div>
+  </div>
+
+  <script>
+    // Navbar Toggle for Mobile
+    function toggleMenu() {
+      document.querySelector('.navbar').classList.toggle('open');
+    }
+  </script>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
